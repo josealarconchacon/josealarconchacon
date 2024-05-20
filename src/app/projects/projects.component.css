@@ -1,0 +1,22 @@
+.projects {
+  padding: 20px;
+}
+
+.projects h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.project {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.project h3 {
+  font-size: 1.5em;
+}
+
+.project p {
+  font-size: 1em;
+}

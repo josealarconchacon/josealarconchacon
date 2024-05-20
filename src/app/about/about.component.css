@@ -1,0 +1,239 @@
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.perfil {
+  width: 250px;
+  height: 250px;
+  background-color: var(--body-color);
+  border: 8px solid var(--first-color);
+  display: grid;
+  place-items: center;
+  transition: background-color 0.4s;
+}
+
+.perfil__content {
+  width: 180px;
+  height: 180px;
+  border: 10px solid var(--first-color);
+  overflow: hidden;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(
+    180deg,
+    hsl(var(--hue), 90%, 80%),
+    hsl(var(--hue), 90%, 30%)
+  );
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+  box-shadow: 0 8px 24px hsla(var(--hue), 90%, 30%, 0.3);
+}
+
+.about__page {
+  padding-bottom: 4rem;
+}
+
+.about__perfil {
+  justify-self: center;
+}
+
+.about__content {
+  row-gap: 4rem;
+}
+
+.about__info {
+  row-gap: 0.75rem;
+  text-align: center;
+}
+
+.about__profession {
+  font-size: 35px;
+}
+.about__description {
+  font-size: 18px;
+}
+
+.about__button {
+  justify-self: center;
+}
+
+.about__skills-title {
+  font-size: var(--h3-font-size);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about__skills-img {
+  position: relative;
+  width: 35px;
+  transition: transform 0.4s;
+}
+
+.about__skills-img:hover {
+  transform: translateY(-0.5rem);
+}
+
+.about__skills-hover-text {
+  position: absolute;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about__skills-img:hover .about__skills-hover-text {
+  opacity: 1;
+}
+
+.about__skills-content {
+  grid-template-columns: repeat(4, max-content);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem 1.5rem;
+}
+
+.about__container {
+  position: relative;
+}
+
+.about__perfil {
+  position: relative;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+@media screen and (max-width: 767px) {
+  .container {
+    margin-inline: 1rem;
+  }
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .perfil {
+    width: 100%;
+    height: 200px;
+    border-width: 5px;
+  }
+  .perfil__content {
+    width: 450px;
+    height: 150px;
+    border-width: 5px;
+  }
+  .about__profession {
+    font-size: 22px;
+    display: flex;
+  }
+  .about__description {
+    text-align: justify;
+  }
+  .resume-title {
+    font-size: 22px;
+  }
+  .about__skills-content {
+    grid-template-columns: repeat(4, max-content);
+    gap: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .about__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+  .about__data {
+    row-gap: 2rem;
+  }
+  .perfil {
+    width: 250px;
+    height: 250px;
+    border-width: 8px;
+  }
+  .perfil__content {
+    width: 480px;
+    height: 180px;
+    border-width: 10px;
+  }
+}
+
+/* Hide h5 and p elements on mobile */
+@media screen and (max-width: 768px) {
+  .resume-item h5,
+  .resume-item p {
+    display: none;
+  }
+
+  .resume-item h4 {
+    width: 100%; /* Set full width */
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-inline: auto;
+  }
+  .section {
+    padding-block: 7rem 2rem;
+  }
+  .section__title {
+    margin-bottom: 3.5rem;
+  }
+  .perfil {
+    width: 500px;
+    height: 500px;
+    border-width: 10px;
+  }
+  .perfil__content {
+    width: 420px;
+    height: 420px;
+    border-width: 10px;
+  }
+  .perfil__img {
+    width: 400px;
+  }
+  .about__container {
+    grid-template-columns: 500px 440px;
+    align-items: center;
+    column-gap: 8rem;
+    padding-top: 2rem;
+  }
+  .about__data {
+    row-gap: 3.5rem;
+  }
+  .about__info {
+    text-align: initial;
+  }
+  .about__button {
+    justify-self: flex-start;
+  }
+  .about__skills-title {
+    text-align: initial;
+  }
+  .about__skills-content {
+    grid-template-columns: repeat(7, max-content);
+    justify-content: initial;
+  }
+  .about__skills-img {
+    width: 40px;
+  }
+}
