@@ -1,8 +1,11 @@
 /* Default styles */
 .navbar {
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
   padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 .container {
@@ -24,46 +27,71 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .nav-links li {
-  display: inline-block;
   margin-right: 20px;
+  border-radius: 5px; /* Add rounded corners */
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* Ensure inline-block for list items */
 }
 
-.nav-links li:last-child {
-  margin-right: 0;
-}
-
-.nav-links a {
+.nav-links li a {
+  display: inline-block; /* Ensure inline-block for links */
+  padding: 10px 15px; /* Add padding to the links */
   font-size: 16px;
   color: #333;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease; /* Add transition */
 }
 
-.nav-links a:hover {
-  color: #007bff;
+.nav-links li a:hover {
+  color: #fff;
+  background-color: #007bff; /* Change to your preferred hover background color */
+  transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+/* Hamburger icon styles */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .logo {
-    margin-bottom: 20px;
+    margin-bottom: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
+    display: block;
   }
 
   .nav-links {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Ensure nav links stay in a row */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    justify-content: flex-start; /* Align items to the start */
   }
 
   .nav-links li {
-    margin-right: 0;
-    margin-bottom: 10px;
+    margin-right: 10px; /* Adjust margin for smaller screens */
+    margin-bottom: 0;
   }
 }

@@ -1,7 +1,7 @@
 <header class="navbar">
   <div class="container">
     <a href="#" class="logo">Your Logo</a>
-    <nav>
+    <nav [class.active]="menuOpen">
       <ul class="nav-links">
         <li><a (click)="scrollToSection('home')">Home</a></li>
         <li><a (click)="scrollToSection('about')">About</a></li>
@@ -9,26 +9,13 @@
         <li><a (click)="scrollToSection('contact')">Contact</a></li>
       </ul>
     </nav>
+    <div class="hamburger" (click)="toggleMenu()">
+      &#9776;
+      <!-- Hamburger icon -->
+    </div>
   </div>
 </header>
+
 <div id="home"><app-home></app-home></div>
 <div id="about"><app-about></app-about></div>
 <div id="projects"><app-projects></app-projects></div>
-
-<footer id="contact">
-  <app-contact></app-contact>
-  <div class="social-media">
-    <a href="https://twitter.com/yourprofile" target="_blank"
-      ><i class="fab fa-twitter"></i
-    ></a>
-    <a href="https://linkedin.com/in/yourprofile" target="_blank"
-      ><i class="fab fa-linkedin-in"></i
-    ></a>
-    <a href="https://github.com/yourprofile" target="_blank"
-      ><i class="fab fa-github"></i
-    ></a>
-    <a href="https://facebook.com/yourprofile" target="_blank"
-      ><i class="fab fa-facebook-f"></i
-    ></a>
-  </div>
-</footer>
