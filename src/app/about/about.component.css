@@ -15,8 +15,6 @@
 .perfil {
   width: 250px;
   height: 250px;
-  background-color: var(--body-color);
-  border: 8px solid var(--first-color);
   display: grid;
   place-items: center;
   transition: background-color 0.4s;
@@ -25,15 +23,9 @@
 .perfil__content {
   width: 180px;
   height: 280px;
-  border: 10px solid var(--first-color);
   overflow: hidden;
   justify-content: center;
   align-items: flex-end;
-  background: linear-gradient(
-    180deg,
-    hsl(var(--hue), 90%, 80%),
-    hsl(var(--hue), 90%, 30%)
-  );
 }
 
 .button {
@@ -99,7 +91,13 @@
 .about__skills-img {
   position: relative;
   width: 35px;
+  height: auto; /* Maintain aspect ratio */
   transition: transform 0.4s;
+}
+.about__skills-img img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block;
 }
 
 .about__skills-img:hover {
@@ -138,34 +136,73 @@
   .container {
     margin-inline: 1rem;
   }
+
   .about__container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .perfil {
     width: 100%;
     height: 200px;
     border-width: 5px;
   }
+
   .perfil__content {
-    width: 90%;
+    width: 100%;
     height: 150px;
     border-width: 5px;
   }
+
   .about__profession {
+    width: 90%;
+    border-width: 5px;
     font-size: 22px;
     display: flex;
   }
+
   .about__description {
     text-align: justify;
+    font-size: 16px;
   }
+
   .resume-title {
     font-size: 22px;
   }
+
+  .perfil__overlay-content {
+    height: 250px;
+  }
+
   .about__skills-content {
-    grid-template-columns: repeat(5, max-content);
+    grid-template-columns: repeat(3, max-content);
     gap: 1rem;
+  }
+
+  .about__description {
+    width: 90%;
+    border-width: 10px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  .info {
+    display: none;
+  }
+
+  .resume-item {
+    margin-bottom: 1.5rem; /* Adjust spacing between resume items */
+  }
+
+  .about__content {
+    row-gap: 2rem; /* Reduced space between sections on mobile */
+  }
+
+  .about__data {
+    margin-bottom: 0.2rem; /* Further reduce space between data and skills */
   }
 }
 
@@ -176,18 +213,32 @@
     gap: 2rem;
     align-items: center;
   }
+  .about__skills-content {
+    grid-template-columns: repeat(4, max-content);
+    gap: 1.5rem;
+  }
   .about__data {
     row-gap: 2rem;
   }
+
   .perfil {
     width: 250px;
     height: 250px;
     border-width: 8px;
   }
+
   .perfil__content {
     width: 90%;
     height: 380px;
     border-width: 10px;
+  }
+
+  .about__content {
+    row-gap: 3rem; /* Reduce the gap between sections on tablet */
+  }
+
+  .about__data {
+    margin-bottom: 3rem; /* Adjust space between data and skills on tablet */
   }
 }
 
@@ -195,49 +246,69 @@
   .container {
     margin-inline: auto;
   }
+
   .section {
     padding-block: 7rem 2rem;
   }
+
   .section__title {
     margin-bottom: 3.5rem;
   }
+
   .perfil {
     width: 500px;
     height: 500px;
     border-width: 10px;
   }
+
   .perfil__content {
     width: 420px;
     height: 420px;
     border-width: 10px;
   }
+
   .perfil__img {
     width: 400px;
   }
+
   .about__container {
     grid-template-columns: 500px 440px;
     align-items: center;
     column-gap: 8rem;
     padding-top: 2rem;
   }
+
   .about__data {
     row-gap: 3.5rem;
   }
+
   .about__info {
     text-align: initial;
   }
+
   .about__button {
     justify-self: flex-start;
   }
+
   .about__skills-title {
     text-align: initial;
     margin-bottom: 2rem;
   }
+
   .about__skills-content {
-    grid-template-columns: repeat(7, max-content);
-    justify-content: initial;
+    grid-template-columns: repeat(5, max-content);
+    gap: 2rem;
   }
+
   .about__skills-img {
     width: 40px;
+  }
+
+  .about__content {
+    row-gap: 3rem; /* Reduce the gap between sections on desktop */
+  }
+
+  .about__data {
+    margin-bottom: 3rem; /* Adjust space between data and skills on desktop */
   }
 }

@@ -1,5 +1,9 @@
-export const environment = {
+export interface Environment {
+  production: boolean;
+  resume: string;
+}
+
+export const environment: Environment = {
   production: false,
-  resume:
-    'https://docs.google.com/document/d/1yFYDjQ7B-zZJihjMu7aLhUeeyPM2iQ9sRhQOB8VWPQs/edit?usp=sharing',
+  resume: '../../assets/resume/../../assets/resume/jose-resume.pdf',
 };

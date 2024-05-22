@@ -9,6 +9,6 @@ export class ResumeDownloadService {
 
   downloadResume(): void {
     const resumeUrl = environment.resume;
-    window.open(resumeUrl, '_blank'); // Open the file in a new tab for download
+    window.open(resumeUrl, '_blank');
   }
 }
