@@ -1,69 +1,104 @@
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #f2f2f2;
+  background: #000000;
+  scroll-behavior: smooth;
 }
 
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
-  background-color: #ffffff;
-  padding: 20px;
+  height: 100vh;
+  background-color: #060b08;
 }
 
-.content {
+.background {
+  background: none;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 
-.photo img {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%; /* Circular image */
-  margin-right: 20px;
+.container {
+  text-align: center;
+  max-width: 1200px;
+  padding: 2rem;
 }
 
-.text {
-  max-width: 500px;
+.text-white {
+  color: #ffffff;
+  text-align: left;
 }
 
-.text h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+.display-2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.text p {
-  font-size: 1.2em;
+.intro-text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.fade-in {
-  display: inline-block;
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
 }
 
-/* Media query for mobile responsiveness */
+.btn-gradient {
+  background: linear-gradient(217deg, #f8174b, #7f1fa3 70.71%);
+  border: 1px solid rgba(72, 48, 48, 0.5);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-gradient:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .home {
-    height: 200px;
-    margin-top: 100px;
-  }
-  .photo {
-    margin-bottom: 20px;
+  .display-2 {
+    font-size: 2.5rem;
   }
 
-  .photo img {
-    width: 100px;
-    height: 100px;
+  .intro-text {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-6 {
+    margin-bottom: 2rem;
   }
 }

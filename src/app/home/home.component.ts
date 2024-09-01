@@ -9,20 +9,20 @@ export class HomeComponent implements OnInit {
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
-    this.animateText('.welcome-text', 'Welcome to My Portfolio', 100);
+    this.animateText('.welcome-text', 'Jose is here', 100);
     setTimeout(() => {
       this.animateText(
         '.intro-text',
-        "Hi, I'm Jose, a professional and current apprentice at one of the leading financial companies. Explore my work and projects below.",
+        'A professional and former apprentice at one of the leading financial companies. Explore my work and projects below.',
         100
       );
-    }, 3000); // delay to start the second animation
+    }, 3000);
   }
 
   animateText(selector: string, text: string, interval: number) {
     const element = document.querySelector(selector);
     if (element) {
-      const words = text.split(/\s+/); // Split text by any whitespace characters
+      const words = text.split(/\s+/);
       const span = this.renderer.createElement('span');
       this.renderer.appendChild(element, span);
       this.renderer.addClass(span, 'fade-in');
@@ -31,28 +31,11 @@ export class HomeComponent implements OnInit {
 
       words.forEach((word, index) => {
         setTimeout(() => {
-          const textNode = this.renderer.createText(word + ' '); // Add space character after each word
+          const textNode = this.renderer.createText(word + ' ');
           this.renderer.appendChild(span, textNode);
         }, totalDelay);
-        totalDelay += interval * (word.length + 1); // Add interval for each character plus one for the space
+        totalDelay += interval * (word.length + 1);
       });
     }
   }
 }
-
-// animateText(selector: string, text: string, interval: number) {
-//   const element = document.querySelector(selector);
-//   if (element) {
-//     const words = text.split('   '); // Split text by words
-//     words.forEach((word, index) => {
-//       setTimeout(() => {
-//         const span = this.renderer.createElement('span');
-//         const textNode = this.renderer.createText(word + ' '); // Add space character after each word
-//         this.renderer.appendChild(span, textNode);
-//         this.renderer.appendChild(element, span);
-//         this.renderer.addClass(span, 'fade-in');
-//       }, index * interval);
-//     });
-//   }
-// }
-// }
