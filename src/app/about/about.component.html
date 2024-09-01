@@ -1,55 +1,40 @@
 <section class="about section">
-  <div class="about__container about__page container grid">
-    <div class="about__perfil perfil">
-      <div class="perfil__content">
-        <div class="perfil__overlay-content">
-          <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4>Programming &amp; Software Development, AAS</h4>
-            <h5 class="info">2021 - 2024</h5>
-            <p class="info"><em>LaGuardia Community College, Queens, NY</em></p>
-            <p class="info">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Cupiditate.
-            </p>
-          </div>
-          <div class="resume-item">
-            <h4>Bachelor in Art</h4>
-            <h5 class="info">2007 - 2010</h5>
-            <p class="info">
-              <em>Escuela Profesional De Arte Manuel Muñoz Cedeño</em>
-            </p>
-            <p class="info">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Cupiditate.
-            </p>
-          </div>
-        </div>
+  <div class="about__container container">
+    <!-- Left Side: Education -->
+    <div class="about__education">
+      <h3 class="resume-title">Education</h3>
+      <div class="resume-item">
+        <h4>Programming &amp; Software Development, AAS</h4>
+        <h5 class="info">2021 - 2024</h5>
+        <p class="info"><em>LaGuardia Community College, Queens, NY</em></p>
+      </div>
+      <div class="resume-item">
+        <h4>Bachelor in Art</h4>
+        <h5 class="info">2007 - 2010</h5>
+        <p class="info">
+          <em>Escuela Profesional De Arte Manuel Muñoz Cedeño</em>
+        </p>
       </div>
     </div>
 
-    <div class="about__content grid">
-      <div class="about__data grid">
-        <div class="about__info grid">
-          <h2 class="about__profession">Summary</h2>
-          <p class="about__description">
-            Exceptionally passionate about
-            <b>innovation, culture, and teamwork</b>, personally and
-            professionally. Thrive on pushing boundaries, embracing diverse
-            perspectives, and fostering collaborative environments to drive
-            positive change and achieve collective success.
-          </p>
-        </div>
-      </div>
+    <!-- Right Side: Summary -->
+    <div class="about__summary">
+      <h2 class="about__profession">Summary</h2>
+      <p class="about__description">
+        Exceptionally passionate about
+        <b>innovation, culture, and teamwork</b>, personally and professionally.
+        Thrive on pushing boundaries, embracing diverse perspectives, and
+        fostering collaborative environments to drive positive change and
+        achieve collective success.
+      </p>
 
       <div class="about__skills">
         <h3 class="about__skills-title">My Skills</h3>
-
-        <div class="about__skills-content grid">
-          <div class="about__skills-img">
+        <div class="about__skills-content">
+          <div class="about__skills-item">
             <img
               src="https://cdn.worldvectorlogo.com/logos/html-1.svg"
-              alt="image HTML"
+              alt="HTML"
               class="about__skills-img"
             />
             <p class="about__skills-hover-text">HTML</p>
@@ -121,9 +106,7 @@
         </div>
       </div>
 
-      <a (click)="downloadResume()" class="about__button button"
-        >Download Resume</a
-      >
+      <a href="#" class="about__button button">Download Resume</a>
     </div>
   </div>
 </section>

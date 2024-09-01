@@ -1,31 +1,82 @@
 .container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10rem;
 }
 
-.grid {
-  display: grid;
-  gap: 1.5rem;
+.about__education {
+  flex: 1;
+  padding-right: 2rem;
 }
 
-.section {
-  padding-block: 5rem 1rem;
+.resume-title {
+  font-size: 24px;
+  margin-bottom: 1rem;
 }
 
-.perfil {
-  width: 250px;
-  height: 250px;
-  display: grid;
-  place-items: center;
-  transition: background-color 0.4s;
+.resume-item {
+  margin-bottom: 1.5rem;
 }
 
-.perfil__content {
-  width: 180px;
-  height: 280px;
-  overflow: hidden;
-  justify-content: center;
-  align-items: flex-end;
+.about__summary {
+  flex: 1;
+}
+
+.about__profession {
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+.about__description {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.about__skills {
+  margin-bottom: 2rem;
+}
+
+.about__skills-title {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.about__skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about__skills-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 70px;
+}
+
+.about__skills-img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.about__skills-img:hover {
+  transform: translateY(-5px);
+}
+
+.about__skills-hover-text {
+  margin-top: 0.5rem;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.about__skills-item:hover .about__skills-hover-text {
+  opacity: 1;
 }
 
 .button {
@@ -40,275 +91,28 @@
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
 }
 
 .button:hover {
   background-color: #0056b3;
   transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .button:active {
   background-color: #004494;
   transform: translateY(0);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.about__page {
-  padding-bottom: 4rem;
-}
-
-.about__perfil {
-  justify-self: center;
-}
-
-.about__content {
-  row-gap: 4rem;
-}
-
-.about__info {
-  row-gap: 0.75rem;
-  text-align: center;
-}
-
-.about__profession {
-  font-size: 35px;
-}
-
-.about__description {
-  font-size: 18px;
-}
-
-.about__button {
-  justify-self: center;
-}
-
-.about__skills-title {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.about__skills-img {
-  position: relative;
-  width: 35px;
-  height: auto; /* Maintain aspect ratio */
-  transition: transform 0.4s;
-}
-.about__skills-img img {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  display: block;
-}
-
-.about__skills-img:hover {
-  transform: translateY(-0.5rem);
-}
-
-.about__skills-hover-text {
-  position: absolute;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.about__skills-img:hover .about__skills-hover-text {
-  opacity: 1;
-}
-
-.about__skills-content {
-  grid-template-columns: repeat(4, max-content);
-  justify-content: center;
-  align-items: center;
-  gap: 2rem 1.5rem;
-}
-
-.about__container {
-  position: relative;
-}
-
-.about__perfil {
-  position: relative;
-}
-
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .container {
-    margin-inline: 1rem;
-  }
-
-  .about__container {
-    display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
   }
-
-  .perfil {
+  .about__education,
+  .about__summary {
     width: 100%;
-    height: 200px;
-    border-width: 5px;
-  }
-
-  .perfil__content {
-    width: 100%;
-    height: 150px;
-    border-width: 5px;
-  }
-
-  .about__profession {
-    width: 90%;
-    border-width: 5px;
-    font-size: 22px;
-    display: flex;
-  }
-
-  .about__description {
-    text-align: justify;
-    font-size: 16px;
-  }
-
-  .resume-title {
-    font-size: 22px;
-  }
-
-  .perfil__overlay-content {
-    height: 250px;
-  }
-
-  .about__skills-content {
-    grid-template-columns: repeat(3, max-content);
-    gap: 1rem;
-  }
-
-  .about__description {
-    width: 90%;
-    border-width: 10px;
-  }
-
-  h4 {
-    font-size: 16px;
-  }
-
-  .info {
-    display: none;
-  }
-
-  .resume-item {
-    margin-bottom: 1.5rem; /* Adjust spacing between resume items */
-  }
-
-  .about__content {
-    row-gap: 2rem; /* Reduced space between sections on mobile */
-  }
-
-  .about__data {
-    margin-bottom: 0.2rem; /* Further reduce space between data and skills */
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .about__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    align-items: center;
-  }
-  .about__skills-content {
-    grid-template-columns: repeat(4, max-content);
-    gap: 1.5rem;
-  }
-  .about__data {
-    row-gap: 2rem;
-  }
-
-  .perfil {
-    width: 250px;
-    height: 250px;
-    border-width: 8px;
-  }
-
-  .perfil__content {
-    width: 90%;
-    height: 380px;
-    border-width: 10px;
-  }
-
-  .about__content {
-    row-gap: 3rem; /* Reduce the gap between sections on tablet */
-  }
-
-  .about__data {
-    margin-bottom: 3rem; /* Adjust space between data and skills on tablet */
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    margin-inline: auto;
-  }
-
-  .section {
-    padding-block: 7rem 2rem;
-  }
-
-  .section__title {
-    margin-bottom: 3.5rem;
-  }
-
-  .perfil {
-    width: 500px;
-    height: 500px;
-    border-width: 10px;
-  }
-
-  .perfil__content {
-    width: 420px;
-    height: 420px;
-    border-width: 10px;
-  }
-
-  .perfil__img {
-    width: 400px;
-  }
-
-  .about__container {
-    grid-template-columns: 500px 440px;
-    align-items: center;
-    column-gap: 8rem;
-    padding-top: 2rem;
-  }
-
-  .about__data {
-    row-gap: 3.5rem;
-  }
-
-  .about__info {
-    text-align: initial;
-  }
-
-  .about__button {
-    justify-self: flex-start;
-  }
-
-  .about__skills-title {
-    text-align: initial;
-    margin-bottom: 2rem;
-  }
-
-  .about__skills-content {
-    grid-template-columns: repeat(5, max-content);
-    gap: 2rem;
-  }
-
-  .about__skills-img {
-    width: 40px;
-  }
-
-  .about__content {
-    row-gap: 3rem; /* Reduce the gap between sections on desktop */
-  }
-
-  .about__data {
-    margin-bottom: 3rem; /* Adjust space between data and skills on desktop */
+    padding-right: 0;
   }
 }
