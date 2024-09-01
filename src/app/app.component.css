@@ -1,11 +1,9 @@
-/* Default styles */
 .navbar {
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  background-color: #060b08;
   padding: 20px 0;
   position: sticky;
   top: 0;
-  z-index: 1000; /* Ensure it stays on top of other content */
+  z-index: 1000;
 }
 
 .container {
@@ -19,7 +17,7 @@
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -32,66 +30,64 @@
 
 .nav-links li {
   margin-right: 20px;
-  border-radius: 5px; /* Add rounded corners */
-  overflow: hidden;
-  transition: background-color 0.3s ease;
-  display: inline-block; /* Ensure inline-block for list items */
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
 }
 
 .nav-links li a {
-  display: inline-block; /* Ensure inline-block for links */
-  padding: 10px 15px; /* Add padding to the links */
+  padding: 10px 15px;
   font-size: 16px;
-  color: #333;
+  color: #ffffff;
   text-decoration: none;
-  transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease; /* Add transition */
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links li a:hover {
-  color: #fff;
-  background-color: #007bff; /* Change to your preferred hover background color */
-  transform: scale(1.05); /* Scale up slightly on hover */
+  color: #007bff;
 }
 
-/* Hamburger icon styles */
 .hamburger {
   display: none;
   font-size: 24px;
+  color: #ffffff;
   cursor: pointer;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: row;
-    justify-content: space-between;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 999;
   }
 
-  .logo {
-    margin-bottom: 0;
+  .nav-links li {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    padding: 15px 0;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
   }
 
   .hamburger {
     display: block;
   }
 
-  nav {
-    display: none;
-    width: 100%;
-  }
-
-  nav.active {
-    display: block;
-  }
-
-  .nav-links {
-    flex-direction: row; /* Ensure nav links stay in a row */
-    flex-wrap: wrap; /* Allow wrapping if needed */
-    justify-content: flex-start; /* Align items to the start */
-  }
-
-  .nav-links li {
-    margin-right: 10px; /* Adjust margin for smaller screens */
-    margin-bottom: 0;
+  nav.active .nav-links {
+    display: flex;
   }
 }
