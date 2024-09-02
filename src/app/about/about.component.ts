@@ -9,7 +9,7 @@ import { ResumeDownloadService } from '../service/resume-download.service';
 export class AboutComponent {
   constructor(private resumeDownloadService: ResumeDownloadService) {}
 
-  downloadResume(): void {
-    this.resumeDownloadService.downloadResume(); // Call the downloadResume method from the service
+  onDownloadResume(): void {
+    this.resumeDownloadService.downloadResume();
   }
 }

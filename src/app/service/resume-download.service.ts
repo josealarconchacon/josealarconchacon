@@ -9,6 +9,6 @@ export class ResumeDownloadService {
 
   downloadResume(): void {
     const resumeUrl = environment.resume;
-    window.open(resumeUrl, '_blank');
+    window.open(resumeUrl, '_blank', 'noopener,noreferrer');
   }
 }

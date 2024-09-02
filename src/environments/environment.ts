@@ -5,5 +5,5 @@ export interface Environment {
 
 export const environment: Environment = {
   production: false,
-  resume: '../../assets/resume/../../assets/resume/jose-resume.pdf',
+  resume: '../assets/resume/Jose Alarcon Resume.pdf',
 };
