@@ -1,0 +1,39 @@
+<header class="navbar">
+  <div class="container">
+    <a href="#" (click)="scrollToSection('home')" class="logo">Your Logo</a>
+    <nav [class.active]="menuOpen">
+      <ul class="nav-links" style="background-color: #000000">
+        <li>
+          <a
+            (click)="scrollToSection('projects')"
+            style="background-color: #000000"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="scrollToSection('about')"
+            style="background-color: #000000"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="scrollToSection('contact')"
+            style="background-color: #000000"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="hamburger" (click)="toggleMenu()">
+      &#9776;
+      <!-- Hamburger icon -->
+    </div>
+  </div>
+</header>
+
+<div id="home"><app-home></app-home></div>
+<div id="projects"><app-projects></app-projects></div>
+<div id="about"><app-about></app-about></div>
+<div id="contact"><app-contact></app-contact></div>

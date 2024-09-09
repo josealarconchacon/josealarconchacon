@@ -7,6 +7,8 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SchProjectsComponent } from './projects/sch-projects/sch-projects.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     ProjectsComponent,
     ContactComponent,
+    SchProjectsComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
