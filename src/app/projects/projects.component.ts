@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 })
 export class ProjectsComponent {
   showSchProject = false;
-
   constructor(private router: Router) {}
 
   navigateToSchProjects() {
