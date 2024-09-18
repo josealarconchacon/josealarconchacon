@@ -1,77 +1,36 @@
-<!-- <section class="feature-pair">
-      <article class="feature feature--image">
-        <img
-          src="../../assets/img/lostAndFoundUI.png"
-          alt="Feature Screenshot"
-        />
+<app-projects *ngIf="showSchProject"></app-projects>
+<div class="container" *ngIf="!showSchProject">
+  <button class="button-16" role="button" *ngIf="isVisible" (click)="back()">
+    Back</button
+  ><br />
+  <div class="grid">
+    <div class="column" *ngFor="let project of projects">
+      <article class="article">
+        <a [href]="project.projectSourceLink">
+          <img
+            alt="Project Image"
+            class="article-image"
+            [src]="project.projectImage"
+          />
+        </a>
+        <header class="article-header">
+          <h1 class="article-title">
+            <a class="article-title-link" [href]="project.projectSourceLink">
+              {{ project.projectTitle }}
+            </a>
+          </h1>
+        </header>
+        <footer class="article-footer">
+          <a class="author-link" [href]="project.projectSourceLink">
+            <img
+              alt="Source Image"
+              class="author-image"
+              [src]="project.sourceImage"
+            />
+            <p class="author-name">Check Source Code</p>
+          </a>
+        </footer>
       </article>
-      <article class="feature feature--text">
-        <h4>Lost & Found</h4>
-        <p>
-          Lost and Found is a website that is intended for use within LAGCC
-          community. The goal of this platform is to connect students with each
-          other and to provide an easy way to reunite them with belongings they
-          have left behind on campus. Students can benefit in several ways using
-          this platform. One of the benefits that this platform can provide
-          students besides finding their belonging is to connect with others and
-          build the network across campus.
-        </p>
-        <a href="https://github.com/josealarconchacon/Lost-And-Found"
-          >Check source code</a
-        >
-      </article>
-    </section> -->
-<!-- <section class="feature-pair">
-      <article class="feature feature--image">
-        <video autoplay loop muted playsinline>
-          <source src="../../assets/video/simulator.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </article>
-      <article class="feature feature--text">
-        <h4>MindBodyReminder</h4>
-        <p>
-          My MindBodyReminder is an app designed to simplify the student
-          experience at LAGCC by providing access to various resources and a
-          reminder feature that allows users to input and prioritize tasks like
-          homework and assignments.
-        </p>
-        <a href="https://github.com/josealarconchacon/MindBodyReminder"
-          >Check source code</a
-        >
-      </article>
-    </section> -->
-<!-- <section class="feature-pair">
-      <article class="feature feature--image">
-        <img
-          src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
-          alt="placeholder"
-        />
-      </article>
-      <article class="feature feature--text">
-        <h4>Lorem ipsum</h4>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae
-          debitis tempore non sed enim. Odio dolores incidunt explicabo numquam
-          soluta. Repellendus consectetur velit asperiores id facere natus a
-          vitae iure!
-        </p>
-      </article>
-    </section> -->
-<!-- <section class="feature-pair">
-      <article class="feature feature--image">
-        <img
-          src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
-          alt="placeholder"
-        />
-      </article>
-      <article class="feature feature--text">
-        <h4>Lorem ipsum</h4>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae
-          debitis tempore non sed enim. Odio dolores incidunt explicabo numquam
-          soluta. Repellendus consectetur velit asperiores id facere natus a
-          vitae iure!
-        </p>
-      </article>
-    </section> -->
+    </div>
+  </div>
+</div>

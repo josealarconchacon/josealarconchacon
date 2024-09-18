@@ -1,5 +1,5 @@
 <main class="container">
-  <section class="features">
+  <section class="features" *ngIf="!showSchProject">
     <section class="feature-pair">
       <article class="feature feature--image">
         <img
@@ -21,7 +21,7 @@
       </article>
     </section>
 
-    <section class="jumbotron">
+    <section class="jumbotron" *ngIf="!showSchProject">
       <div class="jumbotron-content">
         <div class="jumbotron-text">
           <h2>Something else I spent my time</h2>
@@ -31,7 +31,9 @@
             pariatur repellendus hic maiores autem quos eos ab quam! Iusto,
             impedit fugit.
           </p>
-          <button class="btn-primary">Take Me There</button>
+          <button class="btn-primary" (click)="navigateToSchProjects()">
+            Take Me There
+          </button>
         </div>
         <div class="mobile-mockups">
           <div class="mockup-2">
@@ -51,4 +53,5 @@
       </div>
     </section>
   </section>
+  <app-sch-projects *ngIf="showSchProject"></app-sch-projects>
 </main>

@@ -9,6 +9,8 @@ import { ContactComponent } from './contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SchProjectsComponent } from './projects/sch-projects/sch-projects.component';
 import { HeaderComponent } from './header/header.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,8 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     AboutComponent,
     ProjectsComponent,
-    ContactComponent,
     SchProjectsComponent,
+    ContactComponent,
     HeaderComponent,
   ],
   imports: [
@@ -26,6 +28,8 @@ import { HeaderComponent } from './header/header.component';
     BrowserAnimationsModule,
     BrowserModule,
     ReactiveFormsModule,
+    RouterModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
