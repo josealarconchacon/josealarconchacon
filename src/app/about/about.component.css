@@ -1,3 +1,8 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -13,7 +18,7 @@
 }
 
 .resume-title {
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 1rem;
 }
 
@@ -26,7 +31,7 @@
 }
 
 .about__profession {
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 1rem;
 }
 
@@ -40,22 +45,37 @@
 }
 
 .about__skills-title {
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 1rem;
 }
 
-.about__skills-content {
+/* Skills ring styles */
+.about__skills-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.about__skills-ring {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
 }
 
 .about__skills-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  position: absolute;
   width: 70px;
+  text-align: center;
+  transform: rotate(calc(var(--i) * 40deg)) translateY(-140px)
+    rotate(calc(var(--i) * -40deg));
 }
 
 .about__skills-img {
@@ -64,44 +84,37 @@
   transition: transform 0.3s;
 }
 
-.about__skills-img:hover {
-  transform: translateY(-5px);
+.about__skills-item:hover .about__skills-img {
+  transform: scale(1.1);
 }
 
-.about__skills-hover-text {
+.about__skills-label {
   margin-top: 0.5rem;
   font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.3s;
 }
 
-.about__skills-item:hover .about__skills-hover-text {
-  opacity: 1;
-}
-
-.button {
-  display: inline-block;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
+.center-button {
+  position: absolute;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 1.5rem;
+  z-index: 10;
+  background-color: #222222;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
+.center-button:hover {
+  background-color: #444444;
+  transform: scale(1.05);
 }
 
-.button:active {
-  background-color: #004494;
-  transform: translateY(0);
+.center-button:active {
+  background-color: #111111;
+  transform: scale(1);
 }
 
 @media (max-width: 768px) {

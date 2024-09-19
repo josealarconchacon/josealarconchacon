@@ -7,9 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   title = 'carlojose';
-  // scrollToSection(sectionId: string) {
-  //   document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  // }
   menuOpen = false;
 
   toggleMenu() {

@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,36 +6,30 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private renderer: Renderer2) {}
-
   ngOnInit() {
-    this.animateText('.welcome-text', 'Jose is here', 100);
+    this.animateText('.welcome-text', 'Hey👋🏼', 100);
     setTimeout(() => {
       this.animateText(
         '.intro-text',
         'A professional and former apprentice at one of the leading financial companies. Explore my work and projects below.',
-        100
+        50
       );
     }, 3000);
   }
 
   animateText(selector: string, text: string, interval: number) {
-    const element = document.querySelector(selector);
+    const element = document.querySelector(selector) as HTMLElement;
     if (element) {
-      const words = text.split(/\s+/);
-      const span = this.renderer.createElement('span');
-      this.renderer.appendChild(element, span);
-      this.renderer.addClass(span, 'fade-in');
+      element.innerHTML = ''; // Clear previous text
+      let index = 0;
 
-      let totalDelay = 0;
-
-      words.forEach((word, index) => {
-        setTimeout(() => {
-          const textNode = this.renderer.createText(word + ' ');
-          this.renderer.appendChild(span, textNode);
-        }, totalDelay);
-        totalDelay += interval * (word.length + 1);
-      });
+      const typeInterval = setInterval(() => {
+        element.innerHTML += text.charAt(index);
+        index++;
+        if (index > text.length - 1) {
+          clearInterval(typeInterval);
+        }
+      }, interval);
     }
   }
 }

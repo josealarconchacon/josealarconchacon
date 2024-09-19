@@ -46,7 +46,7 @@
 }
 
 .features h4 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;
   padding: 10px 0;
   border-bottom: 1px solid #e0e0e0;
@@ -116,28 +116,30 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-a.btn-link {
-  text-decoration: none;
-  font-size: 15px;
-  padding: 12px 24px 12px 12px;
-  background-color: #222222;
-  max-width: 184px;
-  color: white;
+a.btn-link,
+.btn-primary {
+  display: inline-block;
   text-decoration: none;
   font-size: 16px;
+  padding: 12px 24px;
+  max-width: 198px;
+  background-color: #222222;
+  color: white;
   font-weight: bold;
   border-radius: 5px;
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-a.btn-link:hover {
+a.btn-link:hover,
+.btn-primary:hover {
   background-color: #444444;
   transform: scale(1.05);
 }
 
-a.btn-link:active {
+a.btn-link:active,
+.btn-primary:active {
   background-color: #111111;
-  transform: scale(0.1);
+  transform: scale(1);
 }
 
 .mobile-mockups {

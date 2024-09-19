@@ -2,27 +2,15 @@
   <div class="container">
     <a href="#" (click)="scrollToSection('home')" class="logo">Your Logo</a>
     <nav [class.active]="menuOpen">
-      <ul class="nav-links" style="background-color: #000000">
+      <ul class="nav-links" style="background-color: #090202">
         <li>
-          <a
-            (click)="scrollToSection('projects')"
-            style="background-color: #000000"
-            >Projects</a
-          >
+          <a (click)="scrollToSection('projects')">Projects</a>
         </li>
         <li>
-          <a
-            (click)="scrollToSection('about')"
-            style="background-color: #000000"
-            >About</a
-          >
+          <a (click)="scrollToSection('about')">About</a>
         </li>
         <li>
-          <a
-            (click)="scrollToSection('contact')"
-            style="background-color: #000000"
-            >Contact</a
-          >
+          <a (click)="scrollToSection('contact')">Contact</a>
         </li>
       </ul>
     </nav>
