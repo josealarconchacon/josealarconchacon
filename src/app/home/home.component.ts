@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   ngOnInit() {
-    this.animateText('.welcome-text', 'Hey👋🏼', 100);
+    this.animateText('.welcome-text', 'Hey there!', 100);
     setTimeout(() => {
       this.animateText(
         '.intro-text',
-        'A professional and former apprentice at one of the leading financial companies. Explore my work and projects below.',
+        "I'm Jose C. Alarcon, a professional and former apprentice at one of the leading financial companies. Explore my work and projects below.",
         50
       );
     }, 3000);

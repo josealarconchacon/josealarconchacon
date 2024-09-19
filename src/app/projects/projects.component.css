@@ -9,7 +9,8 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 5px;
+  padding-top: 50px;
 }
 
 .feature--image img {
@@ -220,7 +221,6 @@ a.btn-link:active,
   }
 
   .mobile-mockups {
-    flex-direction: column;
     align-items: center;
   }
 

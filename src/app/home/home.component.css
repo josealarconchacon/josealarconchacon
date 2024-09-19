@@ -15,15 +15,6 @@
     blink-caret 0.75s step-end infinite;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 @keyframes blink-caret {
   from,
   to {
@@ -34,25 +25,11 @@
   }
 }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 60vh;
   background-color: #090202;
 }
 
@@ -63,6 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative; /* Added to allow positioning of shapes */
 }
 
 .container {
@@ -72,6 +50,7 @@
 }
 
 .text-white {
+  padding-top: 100px;
   color: #ffffff;
   text-align: left;
 }
@@ -89,14 +68,14 @@
 
 .btn {
   padding: 1rem 2rem;
-  border-radius: 30px;
+  border-radius: 12px;
   text-transform: uppercase;
   font-weight: bold;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .btn-gradient {
-  background: linear-gradient(217deg, #f8174b, #7f1fa3 70.71%);
+  background: linear-gradient(217deg, #000000, #232323 70.71%);
   border: 1px solid rgba(72, 48, 48, 0.5);
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -104,7 +83,7 @@
 
 .btn-gradient:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .image-container {
@@ -115,13 +94,41 @@
 
 .portfolio-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.shape-circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: 20%;
+  left: 10%;
+  z-index: 1;
+}
+
+.shape-triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 150px solid rgba(255, 255, 255, 0.1);
+  top: 60%;
+  right: 10%;
+  z-index: 1;
+}
+
 @media (max-width: 768px) {
+  .home {
+    height: auto;
+    padding: 1rem;
+  }
+
   .display-2 {
     font-size: 2.5rem;
   }
@@ -134,11 +141,30 @@
     padding: 0.8rem 1.5rem;
   }
 
+  .container {
+    padding: 1rem;
+  }
+
   .row {
     flex-direction: column;
+    align-items: center;
   }
 
   .col-md-6 {
     margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .image-container {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+
+  .text-section {
+    order: 2;
+  }
+
+  .btn {
+    margin-top: 1rem;
   }
 }

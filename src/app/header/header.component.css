@@ -6,7 +6,7 @@ html {
 
 .navbar {
   background-color: #090202;
-  padding: 20px 0;
+  padding: 30px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -21,7 +21,7 @@ html {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
@@ -44,7 +44,7 @@ html {
 
 .nav-links li a {
   padding: 10px 15px;
-  font-size: 16px;
+  font-size: 20px;
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
