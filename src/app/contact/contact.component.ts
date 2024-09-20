@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { ResumeDownloadService } from '../service/resume-download.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -7,35 +9,51 @@ import { ResumeDownloadService } from '../service/resume-download.service';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
-  name: string = '';
-  email: string = '';
-  message: string = '';
+  formData = {
+    name: '',
+    email: '',
+    message: '',
+  };
 
-  constructor(private resumeDownloadService: ResumeDownloadService) {}
+  constructor(
+    private http: HttpClient,
+    private resumeDownloadService: ResumeDownloadService
+  ) {}
 
   onDownloadResume(): void {
     this.resumeDownloadService.downloadResume();
   }
 
-  isFormValid(): boolean {
-    return (
-      this.name.trim() !== '' &&
-      this.email.trim() !== '' &&
-      this.message.trim() !== ''
-    );
+  isFormValid() {
+    return this.formData.name && this.formData.email && this.formData.message;
   }
 
-  onSubmit(): void {
+  onSubmit() {
     if (this.isFormValid()) {
-      console.log('Form submitted successfully');
+      this.http
+        .post('http://localhost:3000/send-email', this.formData)
+        .subscribe({
+          next: (response: any) => {
+            console.log('Email sent successfully', response);
+            alert('Your message has been sent.');
+          },
+          error: (error) => {
+            console.error('Error sending email', error);
+            alert(
+              'There was an error sending your message. Please try again later.'
+            );
+          },
+        });
       this.resetForm();
     }
   }
 
-  resetForm(): void {
-    this.name = '';
-    this.email = '';
-    this.message = '';
+  resetForm() {
+    this.formData = {
+      name: '',
+      email: '',
+      message: '',
+    };
   }
 
   scrollToSection(section: string) {
