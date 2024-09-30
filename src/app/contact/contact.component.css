@@ -39,7 +39,7 @@ html {
 .contact-form .submit-btn {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(217deg, #f8174b, #7f1fa3 70.71%);
+  background: linear-gradient(217deg, #000000, #232323 70.71%);
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -49,7 +49,7 @@ html {
   transition: background 0.3s;
 
   &:hover {
-    background: linear-gradient(217deg, #f73663, #85419d 70.71%);
+    background: linear-gradient(217deg, #232323, #000000 70.71%);
   }
 
   &:disabled {

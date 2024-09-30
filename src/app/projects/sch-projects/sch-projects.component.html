@@ -1,4 +1,3 @@
-<app-projects *ngIf="showSchProject"></app-projects>
 <div class="container" *ngIf="!showSchProject">
   <button class="button-16" role="button" *ngIf="isVisible" (click)="back()">
     Back</button
@@ -6,7 +5,7 @@
   <div class="grid">
     <div class="column" *ngFor="let project of projects">
       <article class="article">
-        <a [href]="project.projectSourceLink">
+        <a [href]="project.projectSourceLink" class="article-image-container">
           <img
             alt="Project Image"
             class="article-image"

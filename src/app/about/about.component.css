@@ -109,6 +109,7 @@ body {
 
 .center-button:hover {
   background-color: #444444;
+  color: white;
   transform: scale(1.05);
 }
 

@@ -22,16 +22,10 @@ export class SchProjectsComponent {
         'https://github.com/josealarconchacon/MindBodyReminder',
     },
     {
-      projectImage: '../../assets/img/lostAndFoundUI.png',
+      projectImage: '../../../assets/img/image (8).png',
       projectTitle: 'SCOOT-CO',
       sourceImage: '../../../assets/icons/github_3291695 (2).png',
       projectSourceLink: 'https://github.com/josealarconchacon/SCOOT-CO',
-    },
-    {
-      projectImage: '../../assets/img/lostAndFoundUI.png',
-      projectTitle: 'Lost & Found',
-      sourceImage: '../../../assets/icons/github_3291695 (2).png',
-      projectSourceLink: 'https://github.com/josealarconchacon/Lost-And-Found',
     },
   ];
 
