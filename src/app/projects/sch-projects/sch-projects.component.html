@@ -1,32 +1,37 @@
-<div class="container" *ngIf="!showSchProject">
-  <button class="button-16" role="button" *ngIf="isVisible" (click)="back()">
-    Back</button
-  ><br />
-  <div class="grid">
-    <div class="column" *ngFor="let project of projects">
-      <article class="article">
-        <a [href]="project.projectSourceLink" class="article-image-container">
+<div class="container">
+  <button class="button-abstract" role="button" (click)="back()">← Back</button>
+  <br />
+  <div class="grid-abstract">
+    <div class="column-abstract" *ngFor="let project of projects">
+      <article class="article-abstract">
+        <a
+          [href]="project.projectSourceLink"
+          class="article-image-container-abstract"
+        >
           <img
             alt="Project Image"
-            class="article-image"
+            class="article-image-abstract"
             [src]="project.projectImage"
           />
         </a>
-        <header class="article-header">
-          <h1 class="article-title">
-            <a class="article-title-link" [href]="project.projectSourceLink">
+        <header class="article-header-abstract">
+          <h1 class="article-title-abstract">
+            <a
+              class="article-title-link-abstract"
+              [href]="project.projectSourceLink"
+            >
               {{ project.projectTitle }}
             </a>
           </h1>
         </header>
-        <footer class="article-footer">
-          <a class="author-link" [href]="project.projectSourceLink">
+        <footer class="article-footer-abstract">
+          <a class="author-link-abstract" [href]="project.projectSourceLink">
             <img
               alt="Source Image"
-              class="author-image"
+              class="author-image-abstract"
               [src]="project.sourceImage"
             />
-            <p class="author-name">Check Source Code</p>
+            <p class="author-name-abstract">Check Source Code</p>
           </a>
         </footer>
       </article>

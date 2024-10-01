@@ -34,12 +34,10 @@ export const skills = [
 export const education = [
   {
     degree: 'Programming & Software Development, AAS',
-    years: '2021 - 2024',
     institution: 'LaGuardia Community College, Queens, NY',
   },
   {
     degree: 'Bachelor in Art',
-    years: '2007 - 2010',
     institution: 'Escuela Profesional De Arte Manuel Muñoz Cedeño',
   },
 ];

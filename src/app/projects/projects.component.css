@@ -9,17 +9,26 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 5px;
+  padding: 0 20px;
   padding-top: 50px;
 }
 
-.feature--image img {
-  width: 100%;
-  height: 80%;
+.feature--image {
+  display: flex;
+  justify-content: center;
+}
+
+.animated-image {
+  width: 70%;
+  height: auto;
   margin-top: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.animated-image:hover {
+  transform: translateY(-10px);
 }
 
 .feature-pair {
@@ -51,7 +60,7 @@
   font-size: 30px;
   font-weight: 600;
   padding: 10px 0;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
   margin: 0;
   line-height: 28px;
 }
@@ -70,6 +79,7 @@
   border-radius: 12px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
 
 .jumbotron-content {
@@ -93,6 +103,7 @@
   font-weight: 600;
   color: #333;
   margin-bottom: 16px;
+  text-align: left;
 }
 
 .jumbotron p {
@@ -157,10 +168,15 @@ a.btn-link:active,
 .mockup-2 {
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 0.4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   padding: 16px;
   width: 240px;
   flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.mockup-2:hover {
+  transform: translateY(-5px);
 }
 
 .mockup-map {
@@ -177,8 +193,6 @@ a.btn-link:active,
   object-fit: contain;
   display: block;
 }
-
-/* Media Queries for Responsiveness */
 
 @media screen and (max-width: 1200px) {
   .feature {
