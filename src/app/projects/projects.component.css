@@ -228,6 +228,11 @@ a.btn-link:active,
   .feature-pair {
     flex-direction: column;
   }
+
+  .mobile-mockups {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -235,13 +240,13 @@ a.btn-link:active,
     padding: 15px;
   }
 
-  .mobile-mockups {
-    align-items: center;
-  }
-
   .mockup-2 {
     width: 100%;
     margin-top: 20px;
+  }
+
+  .mobile-mockups {
+    justify-content: center;
   }
 }
 
@@ -265,5 +270,9 @@ a.btn-link:active,
   .btn-primary {
     font-size: 14px;
     padding: 10px 20px;
+  }
+
+  .animated-image {
+    width: 100%;
   }
 }
