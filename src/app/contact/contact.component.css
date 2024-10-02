@@ -66,6 +66,9 @@ html {
     background: linear-gradient(217deg, #000000, #232323 70.71%);
   }
 }
+::placeholder {
+  color: #bbbbbb;
+}
 
 .contact-form .submit-btn {
   width: 100%;
