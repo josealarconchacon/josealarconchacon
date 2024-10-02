@@ -28,7 +28,6 @@ html {
 
 .contact-form {
   max-width: 450px;
-  max-height: 450px;
   margin: 0 auto;
   padding: 30px;
   background: linear-gradient(217deg, #232323, #000000 70.71%);
@@ -47,7 +46,6 @@ html {
 
 .contact-form .form-group {
   margin-bottom: 10px;
-  max-height: 150px;
 }
 
 .contact-form .form-control {
@@ -60,12 +58,13 @@ html {
   color: #ffffff;
   transition: border-color 0.3s, background-color 0.3s;
   outline: none;
-
-  &:focus {
-    border-color: #000000;
-    background: linear-gradient(217deg, #000000, #232323 70.71%);
-  }
 }
+
+.contact-form .form-control:focus {
+  border-color: #000000;
+  background: linear-gradient(217deg, #000000, #232323 70.71%);
+}
+
 ::placeholder {
   color: #bbbbbb;
 }
@@ -81,21 +80,22 @@ html {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
+}
 
-  &:hover {
-    background: linear-gradient(217deg, #232323, #000000 70.71%);
-    transform: translateY(-2px);
-  }
+.contact-form .submit-btn:hover {
+  background: linear-gradient(217deg, #232323, #000000 70.71%);
+  transform: translateY(-2px);
+}
 
-  &:disabled {
-    background: #444;
-    cursor: not-allowed;
-  }
+.contact-form .submit-btn:disabled {
+  background: #444;
+  cursor: not-allowed;
 }
 
 .footer-col {
-  width: 25%;
+  flex: 1 1 25%;
   padding: 0 15px;
+  min-width: 250px;
 }
 
 .footer-col h4 {
@@ -129,10 +129,10 @@ html {
   font-weight: 300;
   display: block;
   transition: all 0.3s ease;
+}
 
-  &:hover {
-    color: #4e4e4e;
-  }
+.footer-col ul li a:hover {
+  color: #4e4e4e;
 }
 
 .footer-col .social-links a {
@@ -146,22 +146,26 @@ html {
   border-radius: 50%;
   color: #ffffff;
   transition: all 0.5s ease;
-
-  &:hover {
-    background: linear-gradient(217deg, #000000, #4e4e4e 70.71%);
-    color: #ffffff;
-  }
 }
 
-@media (max-width: 767px) {
+.footer-col .social-links a:hover {
+  background: linear-gradient(217deg, #000000, #4e4e4e 70.71%);
+  color: #ffffff;
+}
+
+@media (max-width: 991px) {
   .footer-col {
-    width: 50%;
+    flex: 1 1 50%;
     margin-bottom: 30px;
   }
 }
 
-@media (max-width: 574px) {
+@media (max-width: 575px) {
   .footer-col {
-    width: 100%;
+    flex: 1 1 100%;
+  }
+  .contact-form {
+    max-width: 90%;
+    padding: 20px;
   }
 }
