@@ -1,4 +1,3 @@
-// src/app/food-resource.service.ts
 import { Injectable } from '@angular/core';
 import { Resource } from '../../model/resource';
 

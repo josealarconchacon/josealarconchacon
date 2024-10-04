@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { ResourceService } from './resource.service';
 import { Resource } from '../../model/resource';
 
-fdescribe('ResourceService', () => {
+describe('ResourceService', () => {
   let service: ResourceService;
 
   beforeEach(() => {
