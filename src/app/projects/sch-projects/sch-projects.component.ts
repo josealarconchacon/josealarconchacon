@@ -27,6 +27,12 @@ export class SchProjectsComponent implements OnInit {
       sourceImage: '../../../assets/icons/github_3291695 (2).png',
       projectSourceLink: 'https://github.com/josealarconchacon/SCOOT-CO',
     },
+    {
+      projectImage: '../../../assets/img/image04.png',
+      projectTitle: 'Debt-Tracker',
+      sourceImage: '../../../assets/icons/github_3291695 (2).png',
+      projectSourceLink: 'https://github.com/josealarconchacon/debt-tracker',
+    },
   ];
 
   constructor(private sharedService: SharedService) {}
