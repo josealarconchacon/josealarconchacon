@@ -98,7 +98,7 @@ body {
   text-decoration: none;
   z-index: 10;
   background-color: #222222;
-  color: white;
+  color: white !important;
   font-weight: bold;
   border-radius: 5px;
   padding: 12px 24px;

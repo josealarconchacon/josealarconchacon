@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { OxalateComponent } from './landing-page/dialog-service/oxalate/oxalate.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { ViewMoreComponent } from './landing-page/dialog-service/oxalate/view-more/view-more.component';
-import { AuthComponent } from './user-auth/auth/auth.component';
-import { ProfileComponent } from './user-auth/profile/profile.component';
-import { AuthGuard } from './user-auth/service/auth.guard';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './contact/contact.component';
+import { SchProjectsComponent } from './projects/sch-projects/sch-projects.component';
 
 const routes: Routes = [
-  { path: 'auth', component: AuthComponent },
-  { path: '', component: LandingPageComponent },
-  { path: 'oxalate', component: OxalateComponent },
-  { path: 'view-more', component: ViewMoreComponent },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
-  { path: '', redirectTo: '/auth', pathMatch: 'full' }, // Default route
-  { path: '**', redirectTo: '/auth' }, // Fallback route
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'projects/sch-projects', component: SchProjectsComponent }, // Ensure this route is configured
+  { path: 'contact', component: ContactComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' }, // Fallback route
 ];
 
 @NgModule({
