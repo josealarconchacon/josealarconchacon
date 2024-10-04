@@ -43,3 +43,6 @@ Thumbs.db
 
 # Firebase configuration
 /src/assets/config/firebase-config.json
+
+.env
+

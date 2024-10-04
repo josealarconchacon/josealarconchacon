@@ -1,0 +1,79 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="contact-form">
+        <h4>Let's get in touch</h4>
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <input
+              type="text"
+              placeholder="Name"
+              class="form-control"
+              [(ngModel)]="formData.name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              placeholder="Email"
+              class="form-control"
+              [(ngModel)]="formData.email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              placeholder="Message"
+              class="form-control"
+              [(ngModel)]="formData.message"
+              name="message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn" [disabled]="!isFormValid()">
+            Send Message
+          </button>
+        </form>
+      </div>
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <ul>
+          <li><a (click)="scrollToSection('projects')">Projects</a></li>
+          <li><a (click)="scrollToSection('about')">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow & Contact</h4>
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/jose-alarcon-chacon/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://github.com/josealarconchacon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a (click)="onDownloadResume()">
+            <i class="fa-solid fa-file"></i>
+          </a>
+          <a
+            href="https://x.com/JoseCarlosAla20"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

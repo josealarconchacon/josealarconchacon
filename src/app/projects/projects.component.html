@@ -1,0 +1,60 @@
+<main class="container">
+  <section class="features" *ngIf="!showSchProject">
+    <section class="feature-pair">
+      <article class="feature feature--image">
+        <img
+          src="../../assets/img/image03.png"
+          alt="Feature Screenshot"
+          class="animated-image"
+        />
+      </article>
+      <article class="feature feature--text">
+        <h4>Oxalate Search</h4>
+        <p>
+          Oxalate is a web application that helps users search and filter food
+          items based on their oxalate levels. Built with Angular, the app
+          offers a responsive design, user-friendly search features, and
+          filtering functionality to help users manage their oxalate intake
+          effectively.
+        </p>
+        <a
+          href="https://github.com/josealarconchacon/oxalates"
+          class="btn-link"
+          target="_blank"
+          >Check source code</a
+        >
+      </article>
+    </section>
+
+    <section class="jumbotron" *ngIf="!showSchProject">
+      <div class="jumbotron-content">
+        <div class="jumbotron-text">
+          <h2>Side Projects to Improve My Expertise</h2>
+          <p>
+            These projects are a collection of personal practice exercises,
+            aimed at enhancing my skills and exploring new technologies.
+          </p>
+          <button class="btn-primary" (click)="navigateToSchProjects()">
+            Take Me There
+          </button>
+        </div>
+        <div class="mobile-mockups">
+          <div class="mockup-2">
+            <div class="mockup-map">
+              <img src="../../assets/img/image01.png" alt="" />
+            </div>
+          </div>
+          <div class="mockup-2">
+            <div class="mockup-map">
+              <img src="../../assets/img/lostAndFoundUI.png" alt="" />
+            </div>
+            <div class="mockup-map">
+              <img src="../../assets/img/image02.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <app-sch-projects *ngIf="showSchProject"></app-sch-projects>
+</main>

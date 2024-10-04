@@ -1,0 +1,170 @@
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ffffff;
+  animation: typing 2s steps(30, end) 1s 1 normal both,
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffffff;
+  }
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background-color: #090202;
+}
+
+.background {
+  background: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Added to allow positioning of shapes */
+}
+
+.container {
+  text-align: center;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.text-white {
+  padding-top: 100px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.display-2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.intro-text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-gradient {
+  background: linear-gradient(217deg, #000000, #232323 70.71%);
+  border: 1px solid rgba(72, 48, 48, 0.5);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-gradient:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.shape-circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: 20%;
+  left: 10%;
+  z-index: 1;
+}
+
+.shape-triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 150px solid rgba(255, 255, 255, 0.1);
+  top: 60%;
+  right: 10%;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .home {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .display-2 {
+    font-size: 2.5rem;
+  }
+
+  .intro-text {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-md-6 {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .image-container {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+
+  .text-section {
+    order: 2;
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+}

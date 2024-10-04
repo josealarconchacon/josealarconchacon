@@ -1,0 +1,278 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 50px;
+}
+
+.feature--image {
+  display: flex;
+  justify-content: center;
+}
+
+.animated-image {
+  width: 70%;
+  height: auto;
+  margin-top: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.animated-image:hover {
+  transform: translateY(-10px);
+}
+
+.feature-pair {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.feature {
+  flex: 1 1 45%;
+  text-align: center;
+  padding: 0 15px;
+  margin-top: 40px;
+}
+
+.feature--text {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features {
+  margin: 64px 0;
+}
+
+.features h4 {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 10px 0;
+  border-bottom: 2px solid #e0e0e0;
+  margin: 0;
+  line-height: 28px;
+}
+
+.features p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.jumbotron {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.jumbotron-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.jumbotron-text {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+.jumbotron h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.btn-primary {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007aff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0051a8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+a.btn-link,
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 12px 24px;
+  max-width: 198px;
+  background-color: #222222;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+a.btn-link:hover,
+.btn-primary:hover {
+  background-color: #444444;
+  transform: scale(1.05);
+}
+
+a.btn-link:active,
+.btn-primary:active {
+  background-color: #111111;
+  transform: scale(1);
+}
+
+.mobile-mockups {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.mockup-2 {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: 240px;
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.mockup-2:hover {
+  transform: translateY(-5px);
+}
+
+.mockup-map {
+  height: 160px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mockup-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .feature {
+    flex-basis: 48%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .jumbotron h2 {
+    font-size: 28px;
+  }
+
+  .jumbotron p {
+    font-size: 18px;
+  }
+
+  .jumbotron-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .jumbotron-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .feature {
+    flex-basis: 100%;
+  }
+
+  .feature-pair {
+    flex-direction: column;
+  }
+
+  .mobile-mockups {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    padding: 15px;
+  }
+
+  .mockup-2 {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .mobile-mockups {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .features h4 {
+    font-size: 20px;
+  }
+
+  .features p {
+    font-size: 16px;
+  }
+
+  .jumbotron h2 {
+    font-size: 24px;
+  }
+
+  .jumbotron p {
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .animated-image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,137 @@
+.container {
+  padding: 5vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #faf3dd, #cad1ff);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.button-abstract {
+  background: linear-gradient(217deg, #000000, #232323 70.71%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 20px;
+  display: inline-block;
+  box-shadow: 0px 4px 15px rgba(134, 134, 134, 0.5);
+}
+
+.button-abstract:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.grid-abstract {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: clamp(1rem, 2vw, 2.5rem);
+}
+
+.column-abstract {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-abstract {
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.article-abstract:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.article-image-container-abstract {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.article-image-abstract {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.article-abstract:hover .article-image-abstract {
+  transform: scale(1.1);
+}
+
+.article-header-abstract {
+  padding: 10px;
+  background: linear-gradient(217deg, #000000, #232323 70.71%);
+  color: white;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.article-title-abstract {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.article-title-link-abstract {
+  color: white;
+  text-decoration: none;
+}
+
+.article-title-link-abstract:hover {
+  text-decoration: underline;
+}
+
+.article-footer-abstract {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f7fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.author-link-abstract {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #3c4043;
+}
+
+.author-link-abstract:hover {
+  text-decoration: underline;
+}
+
+.author-image-abstract {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.author-name-abstract {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  .grid-abstract {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
