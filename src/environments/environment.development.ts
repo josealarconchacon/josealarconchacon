@@ -1,9 +1,4 @@
-export interface Environment {
-  production: boolean;
-  resume: string;
-}
-
-export const environment: Environment = {
+export const environment = {
   production: false,
-  resume: '../assets/resume/Jose Alarcon Resume.pdf',
+  baseUrl: 'http://localhost:4200',
 };

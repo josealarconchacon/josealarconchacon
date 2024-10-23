@@ -1,11 +1,4 @@
-export interface Environment {
-  production: boolean;
-  resume: string;
-  apiUrl: string;
-}
-
-export const environment: Environment = {
+export const environment = {
   production: false,
-  resume: '../assets/resume/Jose Carlos Alarcon Chacon Resume.pdf',
-  apiUrl: 'http://localhost:3000',
+  baseUrl: 'http://localhost:4200',
 };

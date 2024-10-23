@@ -5,14 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import { AboutComponent } from './home/about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './home/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SchProjectsComponent } from './projects/sch-projects/sch-projects.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './home/header/header.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { ResumeComponent } from './home/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
     SchProjectsComponent,
     ContactComponent,
     HeaderComponent,
+    ResumeComponent,
   ],
   imports: [
     HttpClientModule,
