@@ -1,0 +1,37 @@
+<header class="navbar">
+  <div class="container">
+    <a href="#" class="logo">
+      <span class="first-name">Jose Carlos</span>
+      <span class="last-name">Alarcon Chacon</span>
+    </a>
+    <div class="desktop-nav">
+      <nav>
+        <ul class="nav-links">
+          <li><a (click)="scrollToSection('projects')">Projects</a></li>
+          <li><a (click)="scrollToSection('about')">About</a></li>
+          <li><a (click)="scrollToSection('contact')">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <div class="bar" [class.animate]="menuOpen"></div>
+    </div>
+  </div>
+</header>
+
+<div class="slide-menu" [class.open]="menuOpen">
+  <nav>
+    <ul class="nav-links">
+      <li><a (click)="scrollToSection('projects')">Projects</a></li>
+      <li><a (click)="scrollToSection('about')">About</a></li>
+      <li><a (click)="scrollToSection('contact')">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="overlay" [class.active]="menuOpen" (click)="toggleMenu()"></div>
+
+<div id="home"><app-home></app-home></div>
+<div id="projects"><app-projects></app-projects></div>
+<div id="about"><app-about></app-about></div>
+<div id="contact"><app-contact></app-contact></div>

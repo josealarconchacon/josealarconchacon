@@ -1,0 +1,89 @@
+<div class="geometric-bg"></div>
+<div class="resume-container">
+  <header class="header">
+    <h1>{{ personalInfo.name }}</h1>
+    <div class="contact-info">
+      <span>{{ personalInfo.email }}</span>
+      <span>{{ personalInfo.phone }}</span>
+      <a href="https://github.com/josealarconchacon" class="link">{{
+        personalInfo.github
+      }}</a>
+      <a href="https://www.linkedin.com/in/jose-alarcon-chacon/" class="link">{{
+        personalInfo.linkedin
+      }}</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Technical Expertise</h2>
+    <div class="skills">
+      <span class="skill-tag" *ngFor="let skill of skills">{{ skill }}</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Professional Experience</h2>
+    <div class="experience" *ngFor="let exp of experience">
+      <div class="experience-header">
+        <div class="left">
+          <h3>{{ exp.company }}</h3>
+          <p class="position">{{ exp.position }}</p>
+        </div>
+        <div class="right">
+          <p class="location">{{ exp.location }}</p>
+          <p class="period">{{ exp.period }}</p>
+        </div>
+      </div>
+      <ul>
+        <li *ngFor="let responsibility of exp.responsibilities">
+          {{ responsibility }}
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Education</h2>
+    <div class="education" *ngFor="let edu of education">
+      <div class="education-header">
+        <div class="left">
+          <h3>{{ edu.school }}</h3>
+          <p class="degree">{{ edu.degree }}</p>
+        </div>
+        <div class="right">
+          <p class="location">{{ edu.location }}</p>
+          <p class="period">{{ edu.graduation || edu.period }}</p>
+        </div>
+      </div>
+      <p *ngIf="edu.description" class="description">{{ edu.description }}</p>
+      <div *ngIf="edu.courses" class="courses">
+        <strong>Key Coursework</strong>
+        <div class="skills">
+          <span class="skill-tag" *ngFor="let course of edu.courses">{{
+            course
+          }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Featured Projects</h2>
+    <div class="project" *ngFor="let project of projects">
+      <div class="project-header">
+        <h3>{{ project.name }}</h3>
+        <a
+          href="https://github.com/josealarconchacon/Image-Recognition"
+          class="link"
+          >{{ project.github }}</a
+        >
+      </div>
+      <p class="description">{{ project.description }}</p>
+      <ul>
+        <li *ngFor="let highlight of project.highlights">
+          {{ highlight }}
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
