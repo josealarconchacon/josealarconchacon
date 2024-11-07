@@ -1,11 +1,14 @@
-// mock-data.ts
-
 export const personalInfo = {
   name: 'Jose Alarcon Chacon',
   email: 'jose.alarcon.chacon@gmail.com',
-  phone: '510-820-4400',
   github: 'Github',
   linkedin: 'LinkedIn',
+};
+
+export const summary = {
+  title: 'Results-driven Software Developer',
+  description:
+    "Currently pursuing a Bachelor’s in Computer Science at Hunter College, with an AAS in Programming & Software Development. Experienced in creating responsive user interfaces and delivering user-centric software. Adaptable to new technologies and passionate about staying ahead of trends, I aim to apply my skills to solve complex problems. A strong communicator and team player, I'm eager to contribute to fast-paced environments and deliver high-quality software solutions",
 };
 
 export const skills = [
@@ -62,6 +65,11 @@ export const experience = [
 
 export const education = [
   {
+    school: 'Hunter College',
+    location: 'New York, NY',
+    degree: 'Bachelor of Computer Science (BA) ',
+  },
+  {
     school: 'LaGuardia Community College',
     location: 'New York, NY',
     degree:
@@ -74,9 +82,6 @@ export const education = [
       'Advanced C/C++',
       'Object-Oriented Programming',
       'Database Concepts',
-      'Intro to Visual Programming',
-      'UNIX Network Operating Systems',
-      'Android App Development',
       'iOS Development',
       'Systems Analysis and Design',
     ],

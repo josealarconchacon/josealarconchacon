@@ -1,89 +1,143 @@
-<div class="geometric-bg"></div>
-<div class="resume-container">
-  <header class="header">
-    <h1>{{ personalInfo.name }}</h1>
-    <div class="contact-info">
-      <span>{{ personalInfo.email }}</span>
-      <span>{{ personalInfo.phone }}</span>
-      <a href="https://github.com/josealarconchacon" class="link">{{
-        personalInfo.github
-      }}</a>
-      <a href="https://www.linkedin.com/in/jose-alarcon-chacon/" class="link">{{
-        personalInfo.linkedin
-      }}</a>
-    </div>
-  </header>
+<div class="sheet A4">
+  <button class="btn btn-print btn-sm btn-light">
+    <i class="fa fa-print"></i> Print
+  </button>
 
-  <section class="section">
-    <h2>Technical Expertise</h2>
-    <div class="skills">
-      <span class="skill-tag" *ngFor="let skill of skills">{{ skill }}</span>
-    </div>
-  </section>
+  <div class="two-column resume">
+    <!-- Header Section -->
+    <section class="resume__section resume__header">
+      <div class="resume__content">
+        <h1>{{ personalInfo.name }}</h1>
+        <div class="info-item">
+          <span class="info-label"><i class="fa fa-envelope"></i></span>
+          <span class="info-text">{{ personalInfo.email }}</span>
+          <span class="info-label">
+            <i class="fa fa-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/in/jose-alarcon-chacon/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ personalInfo.linkedin }}
+            </a>
+            <br />
+          </span>
 
-  <section class="section">
-    <h2>Professional Experience</h2>
-    <div class="experience" *ngFor="let exp of experience">
-      <div class="experience-header">
-        <div class="left">
-          <h3>{{ exp.company }}</h3>
-          <p class="position">{{ exp.position }}</p>
-        </div>
-        <div class="right">
-          <p class="location">{{ exp.location }}</p>
-          <p class="period">{{ exp.period }}</p>
+          <span class="info-label">
+            <i class="fa-brands fa-github"></i>
+            <a
+              href="https://github.com/josealarconchacon"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ personalInfo.github }}
+            </a>
+            <br />
+          </span>
         </div>
       </div>
-      <ul>
-        <li *ngFor="let responsibility of exp.responsibilities">
-          {{ responsibility }}
-        </li>
-      </ul>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <h2>Education</h2>
-    <div class="education" *ngFor="let edu of education">
-      <div class="education-header">
-        <div class="left">
-          <h3>{{ edu.school }}</h3>
-          <p class="degree">{{ edu.degree }}</p>
-        </div>
-        <div class="right">
-          <p class="location">{{ edu.location }}</p>
-          <p class="period">{{ edu.graduation || edu.period }}</p>
-        </div>
-      </div>
-      <p *ngIf="edu.description" class="description">{{ edu.description }}</p>
-      <div *ngIf="edu.courses" class="courses">
-        <strong>Key Coursework</strong>
-        <div class="skills">
-          <span class="skill-tag" *ngFor="let course of edu.courses">{{
-            course
-          }}</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    <div class="resume__columns">
+      <div class="resume__main">
+        <section class="resume__section resume__summary">
+          <div class="resume__content">
+            <div class="resume__section-title">
+              <i class="fa fa-pencil-square-o"></i>
+              <h2>Professional Summary</h2>
+            </div>
+            <p>{{ summary.title }}: {{ summary.description }}</p>
+          </div>
+        </section>
 
-  <section class="section">
-    <h2>Featured Projects</h2>
-    <div class="project" *ngFor="let project of projects">
-      <div class="project-header">
-        <h3>{{ project.name }}</h3>
-        <a
-          href="https://github.com/josealarconchacon/Image-Recognition"
-          class="link"
-          >{{ project.github }}</a
-        >
+        <!-- Experience Section -->
+        <section class="resume__section resume__experience">
+          <div class="resume__content">
+            <div class="resume__section-title">
+              <i class="fa fa-briefcase"></i>
+              <h2>Employment History</h2>
+            </div>
+            <div *ngFor="let exp of experience" class="xp-item">
+              <div class="xp-job">{{ exp.company }}</div>
+              <div class="xp-date">{{ exp.period }}</div>
+              <div class="xp-location">{{ exp.location }}</div>
+              <div class="xp-position">{{ exp.position }}</div>
+              <ul class="responsibilities">
+                <li *ngFor="let responsibility of exp.responsibilities">
+                  {{ responsibility }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section (Moved Here) -->
+        <section class="resume__section resume__projects">
+          <div class="resume__content">
+            <div class="resume__section-title">
+              <i class="fa fa-folder-open"></i>
+              <h2>Projects</h2>
+            </div>
+            <div *ngFor="let project of projects" class="project-item">
+              <div class="project-name">{{ project.name }}</div>
+              <div class="project-link">
+                <a
+                  href="https://github.com/josealarconchacon/Image-Recognition"
+                  >{{ project.github }}</a
+                >
+              </div>
+              <div class="project-description">{{ project.description }}</div>
+              <ul class="project-highlights">
+                <li *ngFor="let highlight of project.highlights">
+                  {{ highlight }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </div>
-      <p class="description">{{ project.description }}</p>
-      <ul>
-        <li *ngFor="let highlight of project.highlights">
-          {{ highlight }}
-        </li>
-      </ul>
+
+      <div class="resume__side">
+        <!-- Education Section -->
+        <section class="resume__section resume__education">
+          <div class="resume__content">
+            <div class="resume__section-title">
+              <i class="fa fa-graduation-cap"></i>
+              <h2>Education</h2>
+            </div>
+            <div *ngFor="let edu of education" class="xp-item">
+              <div class="xp-school">{{ edu.school }}</div>
+              <div class="xp-degree">{{ edu.degree }}</div>
+              <div class="xp-location">{{ edu.location }}</div>
+              <div class="xp-date">{{ edu.graduation || edu.period }}</div>
+              <p *ngIf="edu.description">{{ edu.description }}</p>
+              <div *ngIf="edu.courses" class="courses">
+                <strong>Key Coursework:</strong>
+                <div class="skills">
+                  <span class="skill-tag" *ngFor="let course of edu.courses">{{
+                    course
+                  }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="resume__section resume__skills">
+          <div class="resume__content">
+            <div class="resume__section-title">
+              <i class="fa fa-align-center"></i>
+              <h2>Skills</h2>
+            </div>
+            <div class="skills-list">
+              <span class="skill-tag" *ngFor="let skill of skills">{{
+                skill
+              }}</span>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  </section>
+  </div>
 </div>

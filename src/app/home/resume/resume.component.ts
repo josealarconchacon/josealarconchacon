@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {
   personalInfo,
+  summary,
   skills,
   experience,
   education,
@@ -14,6 +15,7 @@ import {
 })
 export class ResumeComponent {
   personalInfo = personalInfo;
+  summary = summary;
   skills = skills;
   experience = experience;
   education = education;
