@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.animateText(
         '.intro-text',
-        "I'm Jose Carlos Alarcon Chacon, a passionate software engineer and former apprentice at one of the top financial companies. Dive into my world of projects and see what I've been creating.",
+        "I'm Jose, a passionate software engineer and former apprentice at one of the top financial companies. Dive into my world of projects and see what I've been creating.",
         50
       );
     }, 3000);

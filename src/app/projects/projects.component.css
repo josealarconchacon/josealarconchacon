@@ -1,278 +1,293 @@
 * {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
-  padding-top: 50px;
+  padding: 0 40px;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+.shape--circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  top: -100px;
+  left: -100px;
+}
+
+.shape--square {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  transform: rotate(45deg);
+  bottom: -50px;
+  right: -50px;
+}
+
+.shape--large {
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  border-radius: 50%;
+  top: -300px;
+  right: -200px;
+  opacity: 0.05;
+}
+
+.shape--medium {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  bottom: -200px;
+  left: -200px;
+  opacity: 0.05;
+}
+
+.feature-pair {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  margin: 120px 0;
+  position: relative;
+}
+
+.feature {
+  position: relative;
+  z-index: 1;
 }
 
 .feature--image {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .animated-image {
-  width: 70%;
-  height: auto;
-  margin-top: 50px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  width: 100%;
+  height: 75%;
+
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: perspective(1000px) rotateY(-5deg);
 }
 
 .animated-image:hover {
-  transform: translateY(-10px);
-}
-
-.feature-pair {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 80px;
-}
-
-.feature {
-  flex: 1 1 45%;
-  text-align: center;
-  padding: 0 15px;
-  margin-top: 40px;
+  transform: perspective(1000px) rotateY(0deg) translateY(-10px);
 }
 
 .feature--text {
   display: flex;
-  text-align: left;
   flex-direction: column;
   justify-content: center;
 }
 
-.features {
-  margin: 64px 0;
+.text-content {
+  padding: 20px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.features h4 {
-  font-size: 30px;
-  font-weight: 600;
-  padding: 10px 0;
-  border-bottom: 2px solid #e0e0e0;
-  margin: 0;
-  line-height: 28px;
+.label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #6366f1;
+  margin-bottom: 16px;
 }
 
-.features p {
+.feature--text h4 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  background: linear-gradient(45deg, #1f2937, #4b5563);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature--text p {
   font-size: 18px;
-  color: #333;
-  line-height: 1.6;
-  margin-top: 18px;
-  margin-bottom: 18px;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 32px;
 }
 
+/* Jumbotron Section */
 .jumbotron {
-  background-color: #f9f9f9;
-  padding: 40px 20px;
-  border-radius: 12px;
-  overflow: hidden;
+  background: white;
+  padding: 80px 60px;
+  border-radius: 32px;
   position: relative;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  margin: 120px 0;
 }
 
 .jumbotron-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
-.jumbotron-text {
-  flex: 1;
-  min-width: 300px;
-  margin-right: 20px;
-}
-
-.jumbotron h2 {
-  font-size: 36px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 16px;
-  text-align: left;
-}
-
-.jumbotron p {
-  font-size: 20px;
-  color: #555;
+.jumbotron-text h2 {
+  font-size: 48px;
+  font-weight: 700;
   margin-bottom: 24px;
+  background: linear-gradient(45deg, #1f2937, #4b5563);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.btn-primary {
-  font-size: 16px;
+.jumbotron-text p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 40px;
+}
+
+.btn-primary,
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 32px;
+  border-radius: 12px;
   font-weight: 600;
-  color: #fff;
-  background-color: #007aff;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #0051a8;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-a.btn-link,
-.btn-primary {
-  display: inline-block;
-  text-decoration: none;
   font-size: 16px;
-  padding: 12px 24px;
-  max-width: 198px;
+  text-decoration: none;
+  transition: all 0.3s ease;
   background-color: #222222;
   color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-a.btn-link:hover,
+.btn-primary::after,
+.btn-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(217deg, #000000, #4e4e4e 70.71%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-link:hover,
 .btn-primary:hover {
-  background-color: #444444;
-  transform: scale(1.05);
+  color: #c8c8c8;
 }
 
-a.btn-link:active,
-.btn-primary:active {
-  background-color: #111111;
-  transform: scale(1);
-}
-
-.mobile-mockups {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  max-width: 100%;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 20px;
+.mockup-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
 .mockup-2 {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  width: 240px;
-  flex: 1;
-  transition: transform 0.3s ease;
+  background: white;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mockup-2:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
 .mockup-map {
-  height: 160px;
-  border-radius: 12px;
-  margin-bottom: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  position: relative;
+  margin-bottom: 20px;
+}
+
+.mockup-map:last-child {
+  margin-bottom: 0;
 }
 
 .mockup-map img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
+.mockup-map img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
 @media screen and (max-width: 1200px) {
-  .feature {
-    flex-basis: 48%;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .jumbotron h2 {
-    font-size: 28px;
-  }
-
-  .jumbotron p {
-    font-size: 18px;
+  .feature-pair {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .jumbotron-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .jumbotron-text {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .feature {
-    flex-basis: 100%;
-  }
-
-  .feature-pair {
-    flex-direction: column;
-  }
-
-  .mobile-mockups {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
   .jumbotron {
-    padding: 15px;
+    padding: 40px 30px;
   }
 
-  .mockup-2 {
-    width: 100%;
-    margin-top: 20px;
+  .feature--text h4 {
+    font-size: 28px;
   }
 
-  .mobile-mockups {
-    justify-content: center;
+  .jumbotron-text h2 {
+    font-size: 36px;
+  }
+
+  .mockup-group {
+    grid-template-columns: 1fr;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .features h4 {
-    font-size: 20px;
+  .text-content {
+    padding: 24px;
   }
 
-  .features p {
+  .feature--text p,
+  .jumbotron-text p {
     font-size: 16px;
   }
 
-  .jumbotron h2 {
-    font-size: 24px;
-  }
-
-  .jumbotron p {
-    font-size: 16px;
-  }
-
-  .btn-primary {
+  .btn-primary,
+  .btn-link {
+    padding: 12px 24px;
     font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  .animated-image {
-    width: 100%;
   }
 }

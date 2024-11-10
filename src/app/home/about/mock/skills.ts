@@ -33,12 +33,16 @@ export const skills = [
 
 export const education = [
   {
+    degree: 'Bachelor of Computer Science, BA',
+    institution: 'Hunter College, New York, NY',
+  },
+  {
     degree: 'Programming & Software Development, AAS',
     institution: 'LaGuardia Community College, Queens, NY',
   },
   {
     degree: 'Bachelor in Art',
-    institution: 'Escuela Profesional De Arte Manuel Muñoz Cedeño',
+    institution: 'Escuela Profesional De Arte Manuel Muñoz Cedeño, Cuba',
   },
 ];
 
