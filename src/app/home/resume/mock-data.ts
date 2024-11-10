@@ -6,9 +6,9 @@ export const personalInfo = {
 };
 
 export const summary = {
-  title: 'Results-driven Software Developer',
+  title: 'Aspiring Software Developer',
   description:
-    "Currently pursuing a Bachelor’s in Computer Science at Hunter College, with an AAS in Programming & Software Development. Experienced in creating responsive user interfaces and delivering user-centric software. Adaptable to new technologies and passionate about staying ahead of trends, I aim to apply my skills to solve complex problems. A strong communicator and team player, I'm eager to contribute to fast-paced environments and deliver high-quality software solutions",
+    'Pursuing a Bachelor’s in Computer Science at Hunter College with an AAS in Programming & Software Development. I am adaptable, eager to learn, and focused on building practical software solutions',
 };
 
 export const skills = [
@@ -68,6 +68,7 @@ export const education = [
     school: 'Hunter College',
     location: 'New York, NY',
     degree: 'Bachelor of Computer Science (BA) ',
+    graduation: 'Expected Graduation - 2026',
   },
   {
     school: 'LaGuardia Community College',
