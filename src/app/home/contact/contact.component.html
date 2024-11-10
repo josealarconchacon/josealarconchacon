@@ -1,35 +1,48 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="contact-form">
-        <h4>Let's get in touch</h4>
-      </div>
-      <div class="footer-col">
+      <section class="contact-form" aria-labelledby="contactFormTitle">
+        <h4 id="contactFormTitle">Let's get in touch</h4>
+        <!-- Contact form will go here -->
+      </section>
+
+      <section class="footer-col">
         <h4>Menu</h4>
         <ul>
-          <li><a (click)="scrollToSection('projects')">Projects</a></li>
-          <li><a (click)="scrollToSection('about')">About</a></li>
+          <li>
+            <a href="#projects" role="link" aria-label="Go to Projects section"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#about" role="link" aria-label="Go to About section"
+              >About</a
+            >
+          </li>
         </ul>
-      </div>
-      <div class="footer-col">
+      </section>
+
+      <section class="footer-col">
         <h4>Follow & Contact</h4>
         <div class="social-links">
           <a
             href="https://www.linkedin.com/in/jose-alarcon-chacon/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Follow on LinkedIn"
           >
-            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
           </a>
           <a
             href="https://github.com/josealarconchacon"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Follow on GitHub"
           >
-            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
           </a>
         </div>
-      </div>
+      </section>
     </div>
   </div>
 </footer>
