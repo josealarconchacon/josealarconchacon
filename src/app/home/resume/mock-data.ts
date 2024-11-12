@@ -99,6 +99,13 @@ export const education = [
 
 export const projects = [
   {
+    name: 'Oxalates',
+    github: 'GitHub',
+    description:
+      'Oxalate is a web application that helps users search and filter food items based on their oxalate levels. Built with Angular, the app offers a responsive design, user-friendly search features, and filtering functionality to help users manage their oxalate intake effectively.',
+    highlights: [],
+  },
+  {
     name: 'Immigrant Reunification',
     github: 'GitHub',
     description:
