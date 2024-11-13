@@ -101,6 +101,7 @@ export const projects = [
   {
     name: 'Oxalates',
     github: 'GitHub',
+    url: 'https://github.com/josealarconchacon/oxalates',
     description:
       'Oxalate is a web application that helps users search and filter food items based on their oxalate levels. Built with Angular, the app offers a responsive design, user-friendly search features, and filtering functionality to help users manage their oxalate intake effectively.',
     highlights: [],
@@ -108,6 +109,7 @@ export const projects = [
   {
     name: 'Immigrant Reunification',
     github: 'GitHub',
+    url: 'https://github.com/josealarconchacon/Image-Recognition',
     description:
       'Built a mobile application to reunite immigrants and refugees with their families after being separated while traveling',
     highlights: [
