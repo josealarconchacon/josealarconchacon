@@ -9,6 +9,12 @@ import { SharedService } from '../service/shared.service';
 export class SchProjectsComponent implements OnInit {
   projects = [
     {
+      projectImage: '../../assets/img/tictactoe.png',
+      projectTitle: 'Tic Tac Toe',
+      sourceImage: '../../../assets/icons/github_3291695 (2).png',
+      projectSourceLink: 'https://github.com/josealarconchacon/tic-tac-toe.git',
+    },
+    {
       projectImage: '../../assets/img/lostAndFoundUI.png',
       projectTitle: 'Lost & Found',
       sourceImage: '../../../assets/icons/github_3291695 (2).png',
